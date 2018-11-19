@@ -1,0 +1,90 @@
+list2 = [3,4,5,20,5]
+print(list2.index(5))
+
+
+l=(1,2)
+print(2*l)
+
+for j in [1,2,3,4][::-1]:
+    print(j)
+    
+t=(1,2,3,4)
+t.append(5)
+print t
+
+def Test():
+    try:
+        print(0)
+    finally:
+        print(1)
+Test()
+
+list = [1,2,2, 'x', 'y']
+list.pop(2)
+list.pop(2)
+print list
+
+listfinal = [i+j for i in 'bcd' for j in 'ef']
+print listfinal
+
+def foo():
+    total += 1
+    return total
+total = 0
+print(foo())
+
+def foo(i, x=[]):
+    x.append(i)
+    return x
+for i in range(2):
+    print(foo(i))
+    
+class Cls(object):
+    def __init__(self, id):
+        self.id = str(id)
+        id = "111"
+obj = Cls(11)
+print(obj.id)
+
+for i in range(10):
+    if i == 5:
+        break
+    else:
+        print(i)
+        
+class Count(object):
+    def __init__(self, count=0):
+        self.__count = count
+c1 = Count(2)
+c2 = Count(2)
+print(id(c1)) == id(c2)
+n1 = "Good"
+n2 = "Good"
+print(id(n1) == id(n2))
+
+a = [6,5,4,3]
+for a[-1] in a:
+    print a[-1]
+
+y = (i for i in range(3))
+print next(y)
+
+for i in range(10, 5, -1):
+    print i
+
+def sum(seq):
+    def add(x, y):
+        return x+y
+    return reduce(add, seq, 0)
+print sum(range(3))
+
+def check():
+    list1 = [1,2,3,4]
+    list2 = list1
+    list3 = list1[:]
+    return id(list2) == id(list3), list2==list3
+print check()
+
+def div1(x,y):
+    print "%s/%s = %s" % (x, y, x//y)
+print div1(5.,2.)
